@@ -1,44 +1,32 @@
-// function : addtion - substraction - multiplication -division
-#include<stdio.h>
-int add(int a,int b);
-int sub(int a,int b);
-int multi(int a,int b);
-int div(int a,int b);
-main()
+// basics program of cpp
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
 {
-	int a,b,c,d,e,f;
-	printf("enter the values of a and b : ");
-	scanf("%d%d",&a,&b);
-	c=add(a,b);
-	d=sub(a,b);
-	e=multi(a,b);
-	f=div(a,b);
-	printf("Addition=%d",c);
-	printf("\nSubstraction=%d",d);
-	printf("\nmultiplication=%d",e);
-	printf("\nDivision=%d",f);
+    char ch;
+    int num1,num2;
+cout<<"Enter the first number: ";
+cin>>num1;
+cout<<"Enter the second number: ";
+cin>>num2;
+cout<<"Enter the operator you want(+, -, x, /) :";
+cin>>ch;
+if(ch=='+'){
+    cout<<"Addition is :" <<num1+num2;
 }
-int add(int a,int b)
-{
-	int c;
-	c=a+b;
-	return c;
+else if(ch=='-'){
+    cout<<"Subtraction is :"<<num1-num2;
 }
-int sub(int a,int b)
-{
-	int d;
-	d=a-b;
-	return d;
+else if(ch=='+'){
+    cout<<"Multiplication is :"<<num1*num2;
 }
-int multi(int a,int b)
-{
-	int e;
-	e=a*b;
-	return e;
+else if(ch=='+'){
+    cout<<"Division is :"<<num1/num2;
 }
-int div(int a,int b)
-{
-	int f;
-	f=a/b;
-	return f;
+else{
+    cout<<"This operator not in use";
+}
+getch();
+return 0;
 }
